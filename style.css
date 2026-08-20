@@ -208,6 +208,64 @@ nav a:hover { color: var(--leaf); }
 
 .featured-note { color: var(--muted); margin: -6px 0 20px; font-size: 0.95rem; }
 
+/* ---------------- Experience & Affiliations ---------------- */
+.exp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.exp-chip {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  background: #f9faf6;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.exp-chip:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px -18px rgba(47, 93, 58, 0.55);
+  border-color: var(--leaf);
+}
+.exp-tile {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+.exp-tile img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.exp-text { display: flex; flex-direction: column; }
+.exp-name { color: var(--charcoal); font-weight: 700; font-size: 1rem; }
+.exp-role { color: var(--muted); font-size: 0.82rem; margin-top: 2px; }
+
+.pub-venues { margin: 4px 0 0; color: var(--ink); }
+.pub-venues strong { color: var(--forest); margin-right: 6px; }
+.venue-chip {
+  display: inline-block;
+  background: rgba(74, 124, 89, 0.10);
+  border: 1px solid rgba(74, 124, 89, 0.24);
+  color: var(--forest);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin: 4px 4px 0 0;
+}
+
 .pub-card {
   position: relative;
   border-left: 4px solid var(--sage);
