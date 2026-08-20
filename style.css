@@ -241,6 +241,7 @@ nav a:hover { color: var(--leaf); }
 .affil-logo:hover img {
   transform: translateY(-1px);
 }
+.affil-logo.affil-meril img { height: 20px; }
 
 .pub-card {
   position: relative;
