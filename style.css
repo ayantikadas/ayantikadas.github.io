@@ -234,6 +234,8 @@ nav a:hover { color: var(--leaf); }
 .authors { margin: 6px 0; color: var(--muted); }
 .authors strong { color: var(--forest); }
 .venue { margin: 6px 0 10px; font-weight: 700; color: var(--leaf); }
+.venue a { color: var(--leaf); text-decoration: none; border-bottom: 1px dotted var(--sage); }
+.venue a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 
 .pub-links a {
   display: inline-block;
