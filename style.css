@@ -183,7 +183,7 @@ nav a:hover { color: var(--leaf); }
 .updates-list li { margin-bottom: 8px; }
 .updates-list strong { color: var(--leaf); }
 
-/* ---------------- First-author highlight ---------------- */
+/* ---------------- Work highlights ---------------- */
 .featured {
   background:
     radial-gradient(700px 280px at 0% 0%, rgba(74, 124, 89, 0.14), transparent 60%),
@@ -223,8 +223,8 @@ nav a:hover { color: var(--leaf); }
   border-color: var(--leaf);
 }
 
-/* First-author cards get a stronger treatment */
-.pub-card.first-author {
+/* Highlight cards get a stronger treatment */
+.pub-card.highlight {
   border-left: 5px solid var(--forest);
   background: #ffffff;
   box-shadow: 0 8px 24px -18px rgba(47, 93, 58, 0.6);
