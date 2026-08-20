@@ -235,13 +235,9 @@ nav a:hover { color: var(--leaf); }
   width: auto;
   max-width: 84px;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.72;
-  transition: filter 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  transition: transform 0.2s ease;
 }
 .affil-logo:hover img {
-  filter: none;
-  opacity: 1;
   transform: translateY(-1px);
 }
 
