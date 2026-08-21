@@ -139,9 +139,9 @@ nav a:hover { color: var(--leaf); }
 .hero-subtitle { color: var(--leaf); text-align: center; margin: 0; font-weight: 600; font-size: 0.92rem; }
 .subtitle-logo { height: 10px; width: auto; vertical-align: baseline; margin-right: 3px; }
 
-.social-row { display: flex; gap: 12px; margin-top: 4px; }
-.social-row a { color: var(--forest); text-decoration: none; font-weight: 600; font-size: 0.85rem; }
-.social-row a:hover { color: var(--gold); }
+.social-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+.social-row a { color: var(--forest); text-decoration: none; display: inline-flex; align-items: center; transition: color 0.2s ease, transform 0.2s ease; }
+.social-row a:hover { color: var(--gold); transform: translateY(-1px); }
 
 .bio-col h2 {
   text-transform: uppercase;
