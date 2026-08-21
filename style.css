@@ -133,8 +133,9 @@ nav a:hover { color: var(--leaf); }
 }
 
 .hero-name { color: var(--charcoal); text-align: center; margin: 0; font-size: 1.15rem; font-weight: 800; }
-.hero-subtitle { color: var(--leaf); text-align: center; margin: 0; font-weight: 600; font-size: 0.92rem; display: flex; flex-direction: column; align-items: center; gap: 1px; }
-.subtitle-org { display: inline-flex; align-items: center; }
+.hero-subtitle { color: var(--leaf); text-align: center; margin: 0; font-weight: 600; font-size: 0.92rem; }
+.subtitle-role { display: block; }
+.subtitle-org { display: flex; align-items: center; justify-content: center; }
 .subtitle-logo { height: 10px; width: auto; vertical-align: baseline; margin-right: 3px; }
 
 .social-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
