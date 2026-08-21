@@ -141,6 +141,8 @@ nav a:hover { color: var(--leaf); }
 
 .social-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
 .social-row a { color: var(--forest); text-decoration: none; display: inline-flex; align-items: center; transition: color 0.2s ease, transform 0.2s ease; }
+.social-row a svg { display: block; height: 19px; width: auto; }
+.social-row a svg[viewBox="0 0 384 512"] { height: 24px; }
 .social-row a:hover { color: var(--gold); transform: translateY(-1px); }
 
 .bio-col h2 {
