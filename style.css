@@ -70,13 +70,10 @@ nav a {
 nav a:hover { color: var(--leaf); }
 
 .nav-cv {
-  background: var(--forest);
-  color: #fff !important;
-  padding: 8px 14px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px -10px rgba(47, 93, 58, 0.8);
+  color: var(--forest);
+  font-weight: 600;
 }
-.nav-cv:hover { background: var(--leaf); }
+.nav-cv:hover { color: var(--gold); }
 
 /* ---------------- Hero ---------------- */
 .hero { padding: 48px 0 20px; }
@@ -136,7 +133,8 @@ nav a:hover { color: var(--leaf); }
 }
 
 .hero-name { color: var(--charcoal); text-align: center; margin: 0; font-size: 1.15rem; font-weight: 800; }
-.hero-subtitle { color: var(--leaf); text-align: center; margin: 0; font-weight: 600; font-size: 0.92rem; }
+.hero-subtitle { color: var(--leaf); text-align: center; margin: 0; font-weight: 600; font-size: 0.92rem; display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.subtitle-org { display: inline-flex; align-items: center; }
 .subtitle-logo { height: 10px; width: auto; vertical-align: baseline; margin-right: 3px; }
 
 .social-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
