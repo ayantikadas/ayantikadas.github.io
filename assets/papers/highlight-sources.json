@@ -7,6 +7,7 @@
     900,
     630
   ],
+  "presentation": "Image assets and their pixels remain unchanged. Compact, simplified architecture flows are rendered separately in HTML below the images, without overlays or rescaling changes.",
   "figures": [
     {
       "asset": "align-cdae-thesis.webp",
@@ -16,6 +17,12 @@
       "figure": "5.5",
       "pdf_page": 149,
       "printed_page": "116",
+      "architecture": {
+        "flow": ["MRI encoder", "Condition alignment", "Diffusion decoder"],
+        "source_figure": "5.2",
+        "source_pdf_page": 139,
+        "note": "Condition alignment summarizes clinical condition encoding/fusion and cross-attention alignment with decoder features; it is not a separate standalone network layer."
+      },
       "panels": [
         {
           "label": "Baseline",
@@ -60,6 +67,12 @@
       "figure": "4.4",
       "pdf_page": 120,
       "printed_page": "87",
+      "architecture": {
+        "flow": ["MRI encoder", "Latent shift", "Diffusion decoder"],
+        "source_figure": "4.2",
+        "source_pdf_page": 106,
+        "note": "The latent shift is guided by age and cognitive status. Training-only regression and diffusion noise/timestep inputs are omitted from this simplified flow."
+      },
       "panels": [
         {
           "label": "Baseline",
@@ -101,6 +114,12 @@
       "figure": "3.10",
       "pdf_page": 92,
       "printed_page": "59",
+      "architecture": {
+        "flow": ["Patch encoder", "Positional latent", "Diffusion decoder"],
+        "source_figures": ["3.2", "3.3"],
+        "source_pdf_pages": [66, 68],
+        "note": "Positional regression supervises the latent representation during training. Restoration additionally uses neighboring patches and mask-constrained denoising, omitted from the compact backbone view."
+      },
       "panels": [
         {
           "label": "Tear artifact",
@@ -134,6 +153,12 @@
       "figure": "2.5",
       "pdf_page": 58,
       "printed_page": "25",
+      "architecture": {
+        "flow": ["MRI encoder", "Latent probe", "MRI decoder"],
+        "source_figure": "2.5",
+        "source_pdf_page": 58,
+        "note": "A simplified encode/perturb/decode view of the latent probe shown in the GLOW reconstruction example, not a claim of a shared architecture across all compared models."
+      },
       "panels": [
         {
           "label": "Unperturbed",
