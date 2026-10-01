@@ -1,0 +1,163 @@
+{
+  "source_pdf": "Ayantika_PhD_Thesis.pdf",
+  "source_sha256": "c2ecb7ae66b25538c3f3890a8381d078de569b5a691fe684f88693838aedf157",
+  "processing": "All medical imagery is extracted from the cited thesis figures. Only cropping and aspect-preserving resizing are applied. New elements are limited to layout, backgrounds and short labels. No invented scans, histology, attention maps, retouching or contrast changes. Model outputs are the existing thesis results, not newly generated images.",
+  "coordinates": "PDF pages are 1-based; PDF crop boxes are in points. Xrefs identify embedded images; pixel boxes refer to their native dimensions. Boxes use left, top, right, bottom coordinates with the top-left as origin.",
+  "output_size": [
+    900,
+    630
+  ],
+  "figures": [
+    {
+      "asset": "align-cdae-thesis.webp",
+      "title": "Anatomy-aligned progression",
+      "background": "#f5faf8",
+      "accent": "#276457",
+      "figure": "5.5",
+      "pdf_page": 149,
+      "printed_page": "116",
+      "panels": [
+        {
+          "label": "Baseline",
+          "xref": 714,
+          "crop_pixels": [
+            52,
+            52,
+            1469,
+            1896
+          ],
+          "meaning": "Ground-truth baseline MRI, row 2 column (a)."
+        },
+        {
+          "label": "Attention",
+          "xref": 711,
+          "crop_pixels": [
+            52,
+            52,
+            1469,
+            1896
+          ],
+          "meaning": "Existing Align-cDAE attention overlay, row 2 column (c)."
+        },
+        {
+          "label": "Predicted",
+          "xref": 707,
+          "crop_pixels": [
+            52,
+            52,
+            1469,
+            1896
+          ],
+          "meaning": "Align-cDAE predicted follow-up MRI, row 1 column (c)."
+        }
+      ]
+    },
+    {
+      "asset": "ad-dae-thesis.webp",
+      "title": "Predicted MRI progression",
+      "background": "#fff8f3",
+      "accent": "#9b4b21",
+      "figure": "4.4",
+      "pdf_page": 120,
+      "printed_page": "87",
+      "panels": [
+        {
+          "label": "Baseline",
+          "crop_pdf_points": [
+            427.6,
+            98,
+            467.6,
+            150.2
+          ],
+          "meaning": "Ground-truth baseline at age 75, column (h)."
+        },
+        {
+          "label": "+2 years",
+          "crop_pdf_points": [
+            387.3,
+            265.8,
+            426.0,
+            318.0
+          ],
+          "meaning": "AD-DAE predicted follow-up at age 77, column (g)."
+        },
+        {
+          "label": "+4 years",
+          "crop_pdf_points": [
+            386.3,
+            486.5,
+            424.7,
+            537.9
+          ],
+          "meaning": "AD-DAE predicted follow-up at age 79, column (g)."
+        }
+      ]
+    },
+    {
+      "asset": "posdiffae-thesis.webp",
+      "title": "Restoring tissue detail",
+      "background": "#faf7fd",
+      "accent": "#6d428e",
+      "figure": "3.10",
+      "pdf_page": 92,
+      "printed_page": "59",
+      "panels": [
+        {
+          "label": "Tear artifact",
+          "xref": 377,
+          "crop_pixels": [
+            430,
+            173,
+            1533,
+            1276
+          ],
+          "meaning": "Artifact-affected Nissl patch, first row column (b)."
+        },
+        {
+          "label": "Restored",
+          "xref": 367,
+          "crop_pixels": [
+            430,
+            173,
+            1533,
+            1276
+          ],
+          "meaning": "Corresponding PosDiffAE+Restore output, first row column (e)."
+        }
+      ]
+    },
+    {
+      "asset": "representation-study-thesis.webp",
+      "title": "Probing latent representations",
+      "background": "#f5f8fd",
+      "accent": "#315c91",
+      "figure": "2.5",
+      "pdf_page": 58,
+      "printed_page": "25",
+      "panels": [
+        {
+          "label": "Unperturbed",
+          "xref": 135,
+          "crop_pixels": [
+            82,
+            145,
+            271,
+            307
+          ],
+          "meaning": "GLOW reconstruction with unperturbed latent vector."
+        },
+        {
+          "label": "Perturbed",
+          "xref": 135,
+          "crop_pixels": [
+            293,
+            145,
+            482,
+            307
+          ],
+          "meaning": "GLOW reconstruction after perturbing 500 latent dimensions."
+        }
+      ]
+    }
+  ]
+}
