@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 <body>
 
@@ -81,11 +81,11 @@
 
       <div class="pub-card highlight">
         <a class="pub-thumb" href="https://arxiv.org/abs/2603.01552" target="_blank">
-          <img src="assets/papers/align-cdae-thesis.webp" alt="Align-cDAE results: baseline MRI, anatomical attention overlay, and model-predicted follow-up from thesis Figure 5.5." width="900" height="630" loading="lazy" />
-          <span class="architecture-flow flow-align" role="img" aria-label="Simplified Align-cDAE architecture: MRI encoder, age and cognitive conditioning with cross-attention alignment, diffusion decoder.">
-            <span class="flow-step" aria-hidden="true">MRI<br />encoder</span>
-            <span class="flow-step" aria-hidden="true">Condition<br />alignment</span>
-            <span class="flow-step" aria-hidden="true">Diffusion<br />decoder</span>
+          <img src="assets/papers/align-cdae-thesis.webp?v=2" alt="Key question: Can clinical cues guide anatomical change in MRI? Baseline MRI, attention overlay and predicted follow-up. Achievement: aligned clinical conditioning with progression-specific anatomy." width="900" height="810" loading="lazy" />
+          <span class="architecture-flow flow-align" role="img" aria-label="Simplified Align-cDAE architecture: MRI encoder, attention-aligned conditional modelling, diffusion decoder.">
+            <span class="flow-step" aria-hidden="true"><span>MRI<br />encoder</span></span>
+            <span class="flow-step flow-modelling" aria-hidden="true"><span>Attention<br />aligned<br />Modelling</span></span>
+            <span class="flow-step" aria-hidden="true"><span>Diffusion<br />decoder</span></span>
           </span>
         </a>
         <div class="pub-body">
@@ -101,11 +101,11 @@
 
       <div class="pub-card highlight">
         <a class="pub-thumb" href="https://arxiv.org/abs/2511.05934" target="_blank">
-          <img src="assets/papers/ad-dae-thesis.webp" alt="AD-DAE results: acquired baseline MRI at age 75 and model predictions two and four years later from thesis Figure 4.4." width="900" height="630" loading="lazy" />
-          <span class="architecture-flow flow-ad" role="img" aria-label="Simplified AD-DAE architecture: MRI encoder, latent shift guided by age and cognitive status, diffusion decoder.">
-            <span class="flow-step" aria-hidden="true">MRI<br />encoder</span>
-            <span class="flow-step" aria-hidden="true">Latent<br />shift</span>
-            <span class="flow-step" aria-hidden="true">Diffusion<br />decoder</span>
+          <img src="assets/papers/ad-dae-thesis.webp?v=2" alt="Key question: Can MRI progression be controlled without paired follow-ups? Acquired baseline MRI and predictions two and four years later. Achievement: controlled follow-up synthesis from unpaired MRI." width="900" height="810" loading="lazy" />
+          <span class="architecture-flow flow-ad" role="img" aria-label="Simplified AD-DAE architecture: MRI encoder, latent-shift modelling guided by age and cognitive status, diffusion decoder.">
+            <span class="flow-step" aria-hidden="true"><span>MRI<br />encoder</span></span>
+            <span class="flow-step flow-modelling" aria-hidden="true"><span>Latent<br />shift<br />Modelling</span></span>
+            <span class="flow-step" aria-hidden="true"><span>Diffusion<br />decoder</span></span>
           </span>
         </a>
         <div class="pub-body">
@@ -122,11 +122,11 @@
 
       <div class="pub-card highlight">
         <a class="pub-thumb" href="https://arxiv.org/abs/2507.02405" target="_blank">
-          <img src="assets/papers/posdiffae-thesis.webp" alt="PosDiffAE results: a Nissl-stained tissue patch with a tear artifact and its corresponding restored output from thesis Figure 3.10." width="900" height="630" loading="lazy" />
-          <span class="architecture-flow flow-pos" role="img" aria-label="Simplified PosDiffAE architecture: patch encoder, position-aware latent representation learned with positional regression, diffusion decoder. Restoration additionally uses neighboring patches and an artifact mask.">
-            <span class="flow-step" aria-hidden="true">Patch<br />encoder</span>
-            <span class="flow-step" aria-hidden="true">Positional<br />latent</span>
-            <span class="flow-step" aria-hidden="true">Diffusion<br />decoder</span>
+          <img src="assets/papers/posdiffae-thesis.webp?v=2" alt="Key question: Can position guide brain-region classification? Original Nissl-stained brain section and PosDiffAE-predicted region map from thesis Figure 3.5. Achievement: position-aware representations for brain-region classification." width="900" height="810" loading="lazy" />
+          <span class="architecture-flow flow-pos" role="img" aria-label="Simplified PosDiffAE classification architecture: patch encoder, position-aware diffusion modelling, region classifier using the learned representations.">
+            <span class="flow-step" aria-hidden="true"><span>Patch<br />encoder</span></span>
+            <span class="flow-step flow-modelling" aria-hidden="true"><span>Position-<br />aware<br />Modelling</span></span>
+            <span class="flow-step" aria-hidden="true"><span>Region<br />classifier</span></span>
           </span>
         </a>
         <div class="pub-body">
@@ -143,11 +143,11 @@
 
       <div class="pub-card highlight">
         <a class="pub-thumb" href="https://arxiv.org/abs/2211.15527" target="_blank">
-          <img src="assets/papers/representation-study-thesis.webp" alt="Representation study: GLOW MRI reconstructions before and after perturbing 500 latent dimensions, from thesis Figure 2.5." width="900" height="630" loading="lazy" />
-          <span class="architecture-flow flow-representation" role="img" aria-label="Simplified representation-analysis flow: encode the MRI, probe the latent representation by perturbing selected dimensions, and decode the reconstructed MRI.">
-            <span class="flow-step" aria-hidden="true">MRI<br />encoder</span>
-            <span class="flow-step" aria-hidden="true">Latent<br />probe</span>
-            <span class="flow-step" aria-hidden="true">MRI<br />decoder</span>
+          <img src="assets/papers/representation-study-thesis.webp?v=2" alt="Key question: What makes MRI representations useful for anomaly detection? GLOW reconstructions with unperturbed and perturbed latent representations. Achievement: characterized compactness, separability and controllability." width="900" height="810" loading="lazy" />
+          <span class="architecture-flow flow-representation" role="img" aria-label="Simplified representation-analysis flow: MRI encoder, latent-space modelling and perturbation analysis, MRI decoder.">
+            <span class="flow-step" aria-hidden="true"><span>MRI<br />encoder</span></span>
+            <span class="flow-step flow-modelling" aria-hidden="true"><span>Latent<br />space<br />Modelling</span></span>
+            <span class="flow-step" aria-hidden="true"><span>MRI<br />decoder</span></span>
           </span>
         </a>
         <div class="pub-body">

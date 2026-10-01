@@ -298,6 +298,9 @@ nav a:hover { color: var(--leaf); }
 .flow-representation { --flow-accent: #315c91; --flow-bg: #f5f8fd; }
 .flow-step {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 7px 1px;
   border: 1px solid var(--border);
   border-radius: 6px;
@@ -308,6 +311,7 @@ nav a:hover { color: var(--leaf); }
   font-weight: 600;
   line-height: 1.35;
 }
+.flow-modelling { border-color: var(--flow-accent); }
 .flow-step + .flow-step::before {
   content: "\2192";
   position: absolute;

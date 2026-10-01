@@ -1,13 +1,14 @@
 {
   "source_pdf": "Ayantika_PhD_Thesis.pdf",
   "source_sha256": "c2ecb7ae66b25538c3f3890a8381d078de569b5a691fe684f88693838aedf157",
-  "processing": "All medical imagery is extracted from the cited thesis figures. Only cropping and aspect-preserving resizing are applied. New elements are limited to layout, backgrounds and short labels. No invented scans, histology, attention maps, retouching or contrast changes. Model outputs are the existing thesis results, not newly generated images.",
+  "processing": "All medical imagery is extracted from the cited thesis figures. Only cropping and aspect-preserving resizing are applied. New elements are limited to layout, backgrounds, key questions, achievement statements and short labels. No invented scans, histology, attention maps, retouching or contrast changes. Model outputs are the existing thesis results, not newly generated images.",
   "coordinates": "PDF pages are 1-based; PDF crop boxes are in points. Xrefs identify embedded images; pixel boxes refer to their native dimensions. Boxes use left, top, right, bottom coordinates with the top-left as origin.",
   "output_size": [
     900,
-    630
+    810
   ],
-  "presentation": "Image assets and their pixels remain unchanged. Compact, simplified architecture flows are rendered separately in HTML below the images, without overlays or rescaling changes.",
+  "presentation": "Key questions replace the generic image headings; achievements appear beneath the image panels. The MRI imagery and panel labels in pixels [0, 140, 900, 630] remain identical to commit 24abb6d. Histology now emphasizes classification using the original Nissl section and PosDiffAE region prediction from Figure 3.5. Architecture flows remain separate HTML, with Modelling in each middle box.",
+  "accepted_image_commit": "24abb6d",
   "figures": [
     {
       "asset": "align-cdae-thesis.webp",
@@ -17,11 +18,14 @@
       "figure": "5.5",
       "pdf_page": 149,
       "printed_page": "116",
+      "key_question": ["Can clinical cues guide", "anatomical change in MRI?"],
+      "achievement": ["Aligned clinical conditioning", "with progression-specific anatomy."],
+      "achievement_source_pdf_page": 150,
       "architecture": {
-        "flow": ["MRI encoder", "Condition alignment", "Diffusion decoder"],
+        "flow": ["MRI encoder", "Attention aligned Modelling", "Diffusion decoder"],
         "source_figure": "5.2",
         "source_pdf_page": 139,
-        "note": "Condition alignment summarizes clinical condition encoding/fusion and cross-attention alignment with decoder features; it is not a separate standalone network layer."
+        "note": "The middle box summarizes attention-aligned conditional modelling, including clinical condition encoding/fusion and cross-attention alignment with decoder features; it is not a separate standalone network layer."
       },
       "panels": [
         {
@@ -67,8 +71,11 @@
       "figure": "4.4",
       "pdf_page": 120,
       "printed_page": "87",
+      "key_question": ["Can MRI progression be controlled", "without paired follow-ups?"],
+      "achievement": ["Controlled follow-up synthesis", "from unpaired MRI."],
+      "achievement_source_pdf_page": 153,
       "architecture": {
-        "flow": ["MRI encoder", "Latent shift", "Diffusion decoder"],
+        "flow": ["MRI encoder", "Latent shift Modelling", "Diffusion decoder"],
         "source_figure": "4.2",
         "source_pdf_page": 106,
         "note": "The latent shift is guided by age and cognitive status. Training-only regression and diffusion noise/timestep inputs are omitted from this simplified flow."
@@ -108,40 +115,45 @@
     },
     {
       "asset": "posdiffae-thesis.webp",
-      "title": "Restoring tissue detail",
+      "title": "Brain-region classification",
       "background": "#faf7fd",
       "accent": "#6d428e",
-      "figure": "3.10",
-      "pdf_page": 92,
-      "printed_page": "59",
+      "figure": "3.5",
+      "pdf_page": 83,
+      "printed_page": "50",
+      "key_question": ["Can position guide", "brain-region classification?"],
+      "achievement": ["Position-aware representations", "for brain-region classification."],
+      "achievement_source_pdf_page": 96,
       "architecture": {
-        "flow": ["Patch encoder", "Positional latent", "Diffusion decoder"],
-        "source_figures": ["3.2", "3.3"],
-        "source_pdf_pages": [66, 68],
-        "note": "Positional regression supervises the latent representation during training. Restoration additionally uses neighboring patches and mask-constrained denoising, omitted from the compact backbone view."
+        "flow": ["Patch encoder", "Position-aware Modelling", "Region classifier"],
+        "source_figure": "3.2",
+        "source_pdf_page": 66,
+        "note": "Classification is the primary illustrated task. Positional regression structures the diffusion auto-encoder latent space during training, and the learned representations support region classification. The generative restoration branch is not shown."
       },
       "panels": [
         {
-          "label": "Tear artifact",
-          "xref": 377,
+          "label": "Nissl image",
+          "xref": 240,
           "crop_pixels": [
-            430,
-            173,
-            1533,
-            1276
+            48,
+            48,
+            964,
+            1900
           ],
-          "meaning": "Artifact-affected Nissl patch, first row column (b)."
+          "meaning": "Original Nissl-stained brain section, Figure 3.5 top row column (a).",
+          "resampling": "LANCZOS"
         },
         {
-          "label": "Restored",
-          "xref": 367,
+          "label": "Predicted regions",
+          "xref": 244,
           "crop_pixels": [
-            430,
-            173,
-            1533,
-            1276
+            0,
+            0,
+            202,
+            389
           ],
-          "meaning": "Corresponding PosDiffAE+Restore output, first row column (e)."
+          "meaning": "Existing PosDiffAE region-classification prediction, Figure 3.5 top row column (e), not ground truth.",
+          "resampling": "NEAREST"
         }
       ]
     },
@@ -153,8 +165,11 @@
       "figure": "2.5",
       "pdf_page": 58,
       "printed_page": "25",
+      "key_question": ["What makes MRI representations", "useful for anomaly detection?"],
+      "achievement": ["Characterized compactness,", "separability and controllability."],
+      "achievement_source_pdf_page": 58,
       "architecture": {
-        "flow": ["MRI encoder", "Latent probe", "MRI decoder"],
+        "flow": ["MRI encoder", "Latent space Modelling", "MRI decoder"],
         "source_figure": "2.5",
         "source_pdf_page": 58,
         "note": "A simplified encode/perturb/decode view of the latent probe shown in the GLOW reconstruction example, not a claim of a shared architecture across all compared models."
