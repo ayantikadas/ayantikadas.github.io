@@ -7,7 +7,7 @@
     900,
     810
   ],
-  "presentation": "Key questions replace the generic image headings; achievements appear beneath the image panels. The MRI imagery and panel labels in pixels [0, 140, 900, 630] remain identical to commit 24abb6d. Histology now emphasizes classification using the original Nissl section and PosDiffAE region prediction from Figure 3.5. Architecture flows remain separate HTML, with Modelling in each middle box.",
+  "presentation": "Questions and outcome statements appear without heading labels. The MRI imagery and panel labels in pixels [0, 140, 900, 630] remain identical to commit 24abb6d. Histology emphasizes classification using the original Nissl section and PosDiffAE region prediction from Figure 3.5. Architecture flows remain separate HTML, with Modelling in each middle box.",
   "accepted_image_commit": "24abb6d",
   "figures": [
     {
