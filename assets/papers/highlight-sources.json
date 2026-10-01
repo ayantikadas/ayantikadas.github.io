@@ -1,26 +1,25 @@
 {
   "source_pdf": "Ayantika_PhD_Thesis.pdf",
   "source_sha256": "c2ecb7ae66b25538c3f3890a8381d078de569b5a691fe684f88693838aedf157",
-  "processing": "All medical imagery is extracted from the cited thesis figures. Only cropping and aspect-preserving resizing are applied. New elements are limited to layout, backgrounds, key questions, achievement statements and short labels. No invented scans, histology, attention maps, retouching or contrast changes. Model outputs are the existing thesis results, not newly generated images.",
+  "processing": "All medical imagery is extracted from the cited thesis figures. Only cropping and aspect-preserving resizing are applied. New elements are limited to layout, backgrounds, one contribution statement per image and short panel labels. No invented scans, histology, attention maps, retouching or contrast changes. Model outputs are the existing thesis results, not newly generated images.",
   "coordinates": "PDF pages are 1-based; PDF crop boxes are in points. Xrefs identify embedded images; pixel boxes refer to their native dimensions. Boxes use left, top, right, bottom coordinates with the top-left as origin.",
   "output_size": [
     900,
-    810
+    630
   ],
-  "presentation": "Questions and outcome statements appear without heading labels. The MRI imagery and panel labels in pixels [0, 140, 900, 630] remain identical to commit 24abb6d. Histology emphasizes classification using the original Nissl section and PosDiffAE region prediction from Figure 3.5. Architecture flows remain separate HTML, with Modelling in each middle box.",
-  "accepted_image_commit": "24abb6d",
+  "presentation": "Each image has one contribution statement, without a question or an additional footer statement. All medical imagery and panel labels in pixels [0, 140, 900, 630] remain identical to commit ea88342. Histology emphasizes classification using the original Nissl section and PosDiffAE region prediction from Figure 3.5. Architecture flows remain separate HTML, with Modelling in each middle box.",
+  "accepted_image_commit": "ea88342",
   "figures": [
     {
       "asset": "align-cdae-thesis.webp",
-      "title": "Anatomy-aligned progression",
+      "title": "Multimodal image-clinical alignment",
       "background": "#f5faf8",
       "accent": "#276457",
       "figure": "5.5",
       "pdf_page": 149,
       "printed_page": "116",
-      "key_question": ["Can clinical cues guide", "anatomical change in MRI?"],
-      "achievement": ["Aligned clinical conditioning", "with progression-specific anatomy."],
-      "achievement_source_pdf_page": 150,
+      "contribution": ["Multimodal alignment between", "image and clinical features"],
+      "contribution_source_pdf_page": 150,
       "architecture": {
         "flow": ["MRI encoder", "Attention aligned Modelling", "Diffusion decoder"],
         "source_figure": "5.2",
@@ -71,9 +70,8 @@
       "figure": "4.4",
       "pdf_page": 120,
       "printed_page": "87",
-      "key_question": ["Can MRI progression be controlled", "without paired follow-ups?"],
-      "achievement": ["Controlled follow-up synthesis", "from unpaired MRI."],
-      "achievement_source_pdf_page": 153,
+      "contribution": ["Unsupervised representations", "for controllable MRI progression"],
+      "contribution_source_pdf_page": 153,
       "architecture": {
         "flow": ["MRI encoder", "Latent shift Modelling", "Diffusion decoder"],
         "source_figure": "4.2",
@@ -121,9 +119,8 @@
       "figure": "3.5",
       "pdf_page": 83,
       "printed_page": "50",
-      "key_question": ["Can position guide", "brain-region classification?"],
-      "achievement": ["Position-aware representations", "for brain-region classification."],
-      "achievement_source_pdf_page": 96,
+      "contribution": ["Unsupervised, position-aware", "representations for tissue classification"],
+      "contribution_source_pdf_page": 96,
       "architecture": {
         "flow": ["Patch encoder", "Position-aware Modelling", "Region classifier"],
         "source_figure": "3.2",
@@ -165,9 +162,8 @@
       "figure": "2.5",
       "pdf_page": 58,
       "printed_page": "25",
-      "key_question": ["What makes MRI representations", "useful for anomaly detection?"],
-      "achievement": ["Characterized compactness,", "separability and controllability."],
-      "achievement_source_pdf_page": 58,
+      "contribution": ["Analysing unsupervised", "representations for anomaly detection"],
+      "contribution_source_pdf_page": 58,
       "architecture": {
         "flow": ["MRI encoder", "Latent space Modelling", "MRI decoder"],
         "source_figure": "2.5",
